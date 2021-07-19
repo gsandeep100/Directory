@@ -1,24 +1,147 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9mN-7v-Go4">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Room-->
+        <scene sceneID="dzA-K6-T1M">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="hQu-cv-f04" customClass="RoomsViewController" customModule="Directory" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jdu-1p-Npk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rooms" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dZG-wN-Jtx">
+                                <rect key="frame" x="150" y="21" width="75" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="qoE-iI-c6n"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OBY-Ya-BFa">
+                                <rect key="frame" x="0.0" y="85" width="375" height="533"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="hQu-cv-f04" id="f6Z-e5-WHh"/>
+                                    <outlet property="delegate" destination="hQu-cv-f04" id="jec-kt-UJP"/>
+                                </connections>
+                            </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="qex-uk-bIM">
+                                <rect key="frame" x="169" y="333" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" systemColor="systemRedColor"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jEt-w7-gWx"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dZG-wN-Jtx" firstAttribute="top" secondItem="jEt-w7-gWx" secondAttribute="top" constant="21" id="7qZ-NV-Uuj"/>
+                            <constraint firstItem="OBY-Ya-BFa" firstAttribute="bottom" secondItem="jEt-w7-gWx" secondAttribute="bottom" id="Gpf-8D-oqM"/>
+                            <constraint firstItem="OBY-Ya-BFa" firstAttribute="centerX" secondItem="dZG-wN-Jtx" secondAttribute="centerX" id="IB7-PS-2eI"/>
+                            <constraint firstItem="OBY-Ya-BFa" firstAttribute="top" secondItem="dZG-wN-Jtx" secondAttribute="bottom" constant="8" id="aHA-2G-mrr"/>
+                            <constraint firstItem="OBY-Ya-BFa" firstAttribute="leading" secondItem="jEt-w7-gWx" secondAttribute="leading" id="ftj-5P-ZUA"/>
+                            <constraint firstItem="dZG-wN-Jtx" firstAttribute="centerX" secondItem="Jdu-1p-Npk" secondAttribute="centerX" id="kuD-vg-XhL"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Room" image="outline_smoking_rooms_black_24pt" selectedImage="outline_smoking_rooms_black_36pt" id="HNV-0A-F2Q"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="qex-uk-bIM" id="Zfc-38-Xo5"/>
+                        <outlet property="roomTableView" destination="OBY-Ya-BFa" id="v3S-KC-iYO"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cWu-5x-9wH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-930.39999999999998" y="457.42128935532236"/>
+        </scene>
+        <!--People-->
+        <scene sceneID="ez9-jc-Rlg">
+            <objects>
+                <viewController id="gVY-yz-9M6" customClass="PeoplesViewController" customModule="Directory" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aLd-oe-HzI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tcw-sU-Gjp">
+                                <rect key="frame" x="0.0" y="85" width="375" height="533"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="gVY-yz-9M6" id="geg-yG-189"/>
+                                    <outlet property="delegate" destination="gVY-yz-9M6" id="ZpR-bX-Ivb"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Peoples" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rPf-G3-8W9">
+                                <rect key="frame" x="144.5" y="21" width="86" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="H1b-n4-fWb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="sla-ZV-ChS">
+                                <rect key="frame" x="169" y="291" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <color key="color" systemColor="systemRedColor"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="u53-GX-Qa3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tcw-sU-Gjp" firstAttribute="bottom" secondItem="u53-GX-Qa3" secondAttribute="bottom" id="3wg-3V-NjO"/>
+                            <constraint firstItem="tcw-sU-Gjp" firstAttribute="leading" secondItem="u53-GX-Qa3" secondAttribute="leading" id="4gs-4M-GIX"/>
+                            <constraint firstItem="tcw-sU-Gjp" firstAttribute="centerX" secondItem="rPf-G3-8W9" secondAttribute="centerX" id="7qw-Rl-657"/>
+                            <constraint firstItem="rPf-G3-8W9" firstAttribute="centerX" secondItem="aLd-oe-HzI" secondAttribute="centerX" id="cTf-8b-7BK"/>
+                            <constraint firstItem="rPf-G3-8W9" firstAttribute="top" secondItem="u53-GX-Qa3" secondAttribute="top" constant="21" id="giz-Ls-Uvi"/>
+                            <constraint firstItem="tcw-sU-Gjp" firstAttribute="top" secondItem="rPf-G3-8W9" secondAttribute="bottom" constant="8" id="tF7-78-Ahj"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="People" image="outline_people_black_24pt" selectedImage="outline_people_black_36pt" id="dzy-fx-9Kl"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="sla-ZV-ChS" id="24r-5h-3XP"/>
+                        <outlet property="peopleTableView" destination="tcw-sU-Gjp" id="otS-5l-ZpS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dnn-UC-ZT7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-975.20000000000005" y="-276.61169415292358"/>
+        </scene>
+        <!--Main Tab View Controller-->
+        <scene sceneID="fgu-jT-eEQ">
+            <objects>
+                <tabBarController id="9mN-7v-Go4" customClass="MainTabViewController" customModule="Directory" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="KhD-vn-lV5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="gVY-yz-9M6" kind="relationship" relationship="viewControllers" id="zz1-4s-9X2"/>
+                        <segue destination="hQu-cv-f04" kind="relationship" relationship="viewControllers" id="7aT-ae-VJg"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MwN-5b-Ro3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1895" y="28"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="outline_people_black_24pt" width="24" height="24"/>
+        <image name="outline_people_black_36pt" width="36" height="36"/>
+        <image name="outline_smoking_rooms_black_24pt" width="24" height="24"/>
+        <image name="outline_smoking_rooms_black_36pt" width="36" height="36"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
