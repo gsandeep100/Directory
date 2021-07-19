@@ -17,13 +17,15 @@
 		2C34349326A48E8200FB0C63 /* RoomCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C34349226A48E8200FB0C63 /* RoomCellViewModel.swift */; };
 		2C34349526A48F1900FB0C63 /* RoomsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C34349426A48F1900FB0C63 /* RoomsViewModel.swift */; };
 		2C34349726A4917200FB0C63 /* RoomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C34349626A4917200FB0C63 /* RoomCell.xib */; };
+		2C34349926A5188200FB0C63 /* peoples.json in Resources */ = {isa = PBXBuildFile; fileRef = 2C34349826A5188200FB0C63 /* peoples.json */; };
+		2C34349B26A518A500FB0C63 /* rooms.json in Resources */ = {isa = PBXBuildFile; fileRef = 2C34349A26A518A500FB0C63 /* rooms.json */; };
 		2C8419C7269E141500175447 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8419C6269E141500175447 /* Utility.swift */; };
 		2CA6B455269CBFBF0056ACFC /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA6B454269CBFBF0056ACFC /* MainTabViewController.swift */; };
 		2CA6B458269CBFBF0056ACFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CA6B456269CBFBF0056ACFC /* Main.storyboard */; };
 		2CA6B45B269CBFBF0056ACFC /* Directory.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2CA6B459269CBFBF0056ACFC /* Directory.xcdatamodeld */; };
 		2CA6B45D269CBFC10056ACFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CA6B45C269CBFC10056ACFC /* Assets.xcassets */; };
 		2CA6B460269CBFC10056ACFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CA6B45E269CBFC10056ACFC /* LaunchScreen.storyboard */; };
-		2CA6B46B269CBFC10056ACFC /* DirectoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA6B46A269CBFC10056ACFC /* DirectoryTests.swift */; };
+		2CA6B46B269CBFC10056ACFC /* PeopleViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA6B46A269CBFC10056ACFC /* PeopleViewModelTest.swift */; };
 		2CA6B476269CBFC10056ACFC /* DirectoryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA6B475269CBFC10056ACFC /* DirectoryUITests.swift */; };
 		2CA6B48A269CC5930056ACFC /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA6B489269CC5930056ACFC /* Service.swift */; };
 		2CA6B48F269CC76E0056ACFC /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA6B48E269CC76E0056ACFC /* People.swift */; };
@@ -61,6 +63,8 @@
 		2C34349226A48E8200FB0C63 /* RoomCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomCellViewModel.swift; sourceTree = "<group>"; };
 		2C34349426A48F1900FB0C63 /* RoomsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsViewModel.swift; sourceTree = "<group>"; };
 		2C34349626A4917200FB0C63 /* RoomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RoomCell.xib; sourceTree = "<group>"; };
+		2C34349826A5188200FB0C63 /* peoples.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = peoples.json; sourceTree = "<group>"; };
+		2C34349A26A518A500FB0C63 /* rooms.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = rooms.json; sourceTree = "<group>"; };
 		2C8419C6269E141500175447 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		2CA6B44D269CBFBF0056ACFC /* Directory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Directory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CA6B454269CBFBF0056ACFC /* MainTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
@@ -70,7 +74,7 @@
 		2CA6B45F269CBFC10056ACFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2CA6B461269CBFC10056ACFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CA6B466269CBFC10056ACFC /* DirectoryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DirectoryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2CA6B46A269CBFC10056ACFC /* DirectoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryTests.swift; sourceTree = "<group>"; };
+		2CA6B46A269CBFC10056ACFC /* PeopleViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewModelTest.swift; sourceTree = "<group>"; };
 		2CA6B46C269CBFC10056ACFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CA6B471269CBFC10056ACFC /* DirectoryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DirectoryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CA6B475269CBFC10056ACFC /* DirectoryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryUITests.swift; sourceTree = "<group>"; };
@@ -257,8 +261,10 @@
 		2CA6B469269CBFC10056ACFC /* DirectoryTests */ = {
 			isa = PBXGroup;
 			children = (
-				2CA6B46A269CBFC10056ACFC /* DirectoryTests.swift */,
+				2CA6B46A269CBFC10056ACFC /* PeopleViewModelTest.swift */,
 				2CA6B46C269CBFC10056ACFC /* Info.plist */,
+				2C34349826A5188200FB0C63 /* peoples.json */,
+				2C34349A26A518A500FB0C63 /* rooms.json */,
 			);
 			path = DirectoryTests;
 			sourceTree = "<group>";
@@ -395,6 +401,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C34349B26A518A500FB0C63 /* rooms.json in Resources */,
+				2C34349926A5188200FB0C63 /* peoples.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,7 +444,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CA6B46B269CBFC10056ACFC /* DirectoryTests.swift in Sources */,
+				2CA6B46B269CBFC10056ACFC /* PeopleViewModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
