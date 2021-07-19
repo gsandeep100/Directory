@@ -8,15 +8,14 @@
 import XCTest
 @testable import Directory
 
-
-fileprivate class MockPeopleApiService: PeoplesServiceProtocol {
+fileprivate class MockRoomsApiService: RoomsServiceProtocol {
     
-    func getPeoples(completion: @escaping (_ success: Bool, _ results: Peoples?, _ error: String?) -> ()){
+    func getRooms(completion: @escaping (_ success: Bool, _ results: Rooms?, _ error: String?) -> ()){
         do {
-            let path = Bundle.main.path(forResource: "peoples", ofType: "json")
+            let path = Bundle.main.path(forResource: "rooms", ofType: "json")
             let jsonData = try Data(contentsOf: URL(fileURLWithPath: path!))
 
-            let model = try JSONDecoder().decode(Peoples.self, from: jsonData)
+            let model = try JSONDecoder().decode(Rooms.self, from: jsonData)
             completion(true, model, nil)
         } catch {
             completion(false, nil, "Error: Trying to parse Peoples to model")
@@ -24,7 +23,7 @@ fileprivate class MockPeopleApiService: PeoplesServiceProtocol {
     }
 }
 
-class PeopleViewModelTest: XCTestCase {
+class RoomViewModelTest: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

@@ -33,6 +33,7 @@
 		2CA6B495269CD6780056ACFC /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA6B494269CD6780056ACFC /* PeopleViewController.swift */; };
 		2CA6B499269CD6D40056ACFC /* RoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA6B498269CD6D40056ACFC /* RoomViewController.swift */; };
 		2CD7E801269DD9F0009F1C4D /* RoomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD7E800269DD9F0009F1C4D /* RoomCell.swift */; };
+		2CF8A96526A56CC70056340C /* RoomViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF8A96426A56CC70056340C /* RoomViewModelTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		2CA6B494269CD6780056ACFC /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
 		2CA6B498269CD6D40056ACFC /* RoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomViewController.swift; sourceTree = "<group>"; };
 		2CD7E800269DD9F0009F1C4D /* RoomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomCell.swift; sourceTree = "<group>"; };
+		2CF8A96426A56CC70056340C /* RoomViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomViewModelTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -262,6 +264,7 @@
 			isa = PBXGroup;
 			children = (
 				2CA6B46A269CBFC10056ACFC /* PeopleViewModelTest.swift */,
+				2CF8A96426A56CC70056340C /* RoomViewModelTest.swift */,
 				2CA6B46C269CBFC10056ACFC /* Info.plist */,
 				2C34349826A5188200FB0C63 /* peoples.json */,
 				2C34349A26A518A500FB0C63 /* rooms.json */,
@@ -445,6 +448,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CA6B46B269CBFC10056ACFC /* PeopleViewModelTest.swift in Sources */,
+				2CF8A96526A56CC70056340C /* RoomViewModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
